@@ -148,7 +148,7 @@ class PatientAPI(Resource):
                         for file in file_list:
                             if file.filename == '':
                                 return jsonify({"error": "No selected file"}), 400
-                            upload_file(file,folder++'/flight/day'+str(i+1))
+                            upload_file(file,folder+'/flight/day'+str(i+1))
         print(hotelPackage)
         if hotelPackage!='false':
             for i in range(0,total):
@@ -160,6 +160,6 @@ class PatientAPI(Resource):
                         for file in file_list:
                             if file.filename == '':
                                 return jsonify({"error": "No selected file"}), 400
-                            upload_file(file,folder++'/hotel/day'+str(i+1))
+                            upload_file(file,folder+'/hotel/day'+str(i+1))
         return jsonify({'data':''})
     
